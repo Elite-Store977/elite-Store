@@ -1,1 +1,109 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
 
+body{
+    background:#f5f5f5;
+    color:#111;
+}
+
+/* Header */
+header{
+    background:#111827;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+nav a:hover{
+    color:#f59e0b;
+}
+
+/* Hero */
+.hero{
+    background:linear-gradient(135deg,#2563eb,#f59e0b);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h2{
+    font-size:40px;
+}
+
+.hero button{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    background:white;
+    color:#111;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+/* Products */
+.products{
+    padding:40px 20px;
+    text-align:center;
+}
+
+.products h2{
+    margin-bottom:30px;
+}
+
+.card{
+    display:inline-block;
+    background:white;
+    width:250px;
+    margin:15px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card button{
+    margin-top:15px;
+    padding:10px 20px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* Footer */
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Mobile */
+@media(max-width:700px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+.hero h2{
+    font-size:28px;
+}
+
+.card{
+    width:90%;
+}
+
+}
