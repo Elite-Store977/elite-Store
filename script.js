@@ -1,36 +1,49 @@
-// Elite Store JavaScript
+// Elite Store Script
 
 let cart = 0;
 
-// Add To Cart
+
+// Add To Cart Function
+
 function addToCart(){
 
     cart++;
 
-    alert("Product added to cart! 🛒");
+    document.getElementById("cart").innerHTML = cart;
 
-    console.log("Total Cart Items: " + cart);
+    alert("Product added to cart 🛒");
 
 }
 
 
-// Simple Search
+
+// Search Function
+
 function searchProduct(){
 
-    let input = document.getElementById("search").value.toLowerCase();
+    let input = document
+    .getElementById("search")
+    .value
+    .toLowerCase();
 
-    let products = document.getElementsByClassName("card");
+
+    let products = document
+    .getElementsByClassName("card");
 
 
-    for(let i=0; i<products.length; i++){
+    for(let i = 0; i < products.length; i++){
 
-        let name = products[i].innerText.toLowerCase();
+        let productName = products[i]
+        .innerText
+        .toLowerCase();
 
-        if(name.includes(input)){
 
-            products[i].style.display="inline-block";
+        if(productName.includes(input)){
 
-        }else{
+            products[i].style.display="block";
+
+        }
+        else{
 
             products[i].style.display="none";
 
@@ -41,7 +54,9 @@ function searchProduct(){
 }
 
 
+
 // Welcome Message
+
 window.onload = function(){
 
     console.log("Welcome to Elite Store 🚀");
