@@ -5,13 +5,22 @@ let cart = 0;
 
 // Add To Cart Function
 
-function addToCart(){
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    cart++;
 
-    document.getElementById("cart").innerHTML = cart;
+function addToCart(product, price){
 
-    alert("Product added to cart 🛒");
+    cart.push({
+        name: product,
+        price: price
+    });
+
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+
+    alert(product + " added to cart 🛒");
+
 
 }
 
