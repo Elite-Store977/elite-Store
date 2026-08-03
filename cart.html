@@ -1,28 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Cart | Elite Store</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
 <header>
-
 <h1>🛍️ Elite Store</h1>
-
-<a href="index.html">Continue Shopping</a>
-
+<a href="index.html">⬅ Continue Shopping</a>
 </header>
-
 
 <section class="cart-page">
 
@@ -30,65 +20,64 @@
 
 <div id="cart-items"></div>
 
-<h2 id="total"></h2>
-
+<h2 id="total">Total: $0</h2>
 
 <a href="checkout.html">
-
-<button>
-Proceed To Checkout 💳
-</button>
-
+<button>Proceed To Checkout 💳</button>
 </a>
-
 
 </section>
 
-
-
 <footer>
-
-<p>
-© 2026 Elite Store
-</p>
-
+<p>© 2026 Elite Store</p>
 </footer>
-
-
 
 <script>
 
-let items = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-let box = document.getElementById("cart-items");
-
+let cartBox = document.getElementById("cart-items");
 let total = 0;
 
+if(cart.length === 0){
 
-items.forEach(item => {
+    cartBox.innerHTML = "<h3>Your Cart Is Empty 😔</h3>";
 
-box.innerHTML += `
-<div class="cart-item">
+}else{
 
-<h3>${item.name}</h3>
+    cart.forEach((item,index)=>{
 
-<p>Price: $${item.price}</p>
+        total += Number(item.price);
 
-</div>
-`;
+        cartBox.innerHTML += `
+        <div style="border:1px solid #ddd;padding:15px;margin:15px 0;border-radius:8px;">
+            <h3>${item.name}</h3>
+            <p>Price: $${item.price}</p>
 
-total += Number(item.price);
+            <button onclick="removeItem(${index})">
+                Remove ❌
+            </button>
+        </div>
+        `;
 
-});
+    });
 
+}
 
 document.getElementById("total").innerHTML =
 "Total: $" + total;
 
+function removeItem(index){
+
+    cart.splice(index,1);
+
+    localStorage.setItem("cart",JSON.stringify(cart));
+
+    location.reload();
+
+}
 
 </script>
 
-
 </body>
-
 </html>
