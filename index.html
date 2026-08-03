@@ -1,67 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Elite Store | Online Shopping</title>
 
+<meta name="description" content="Elite Store - Premium online shopping for electronics, fashion, accessories and more.">
+
 <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
+<!-- Header -->
+
 <header>
-    <h1>🛍️ Elite Store</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Products</a>
-        <a href="#">Contact</a>
-    </nav>
+
+<div class="logo">
+<h1>🛍️ Elite Store</h1>
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Products</a>
+<a href="#">Categories</a>
+<a href="#">Contact</a>
+</nav>
+
+<div class="cart">
+🛒 Cart: <span id="cart">0</span>
+</div>
+
 </header>
 
 
+
+<!-- Hero -->
+
 <section class="hero">
-    <h2>Welcome to Elite Store</h2>
-    <p>Premium Products • Best Prices • Fast Delivery</p>
-    <button>Shop Now</button>
+
+<h2>Welcome To Elite Store</h2>
+
+<p>
+Premium Products • Best Prices • Fast Delivery
+</p>
+
+<button>
+Shop Now
+</button>
+
 </section>
 
+
+
+<!-- Search -->
+
+<section class="search">
+
+<input 
+id="search"
+type="text"
+placeholder="Search Products..."
+onkeyup="searchProduct()">
+
+</section>
+
+
+
+<!-- Products -->
 
 <section class="products">
 
 <h2>Featured Products</h2>
 
+
+<div class="product-box">
+
+
 <div class="card">
-    <h3>Smart Watch</h3>
-    <p>$49.99</p>
-    <button>Add To Cart</button>
+
+<h3>Smart Watch</h3>
+
+<p>$49.99</p>
+
+<button onclick="addToCart()">
+Add To Cart
+</button>
+
 </div>
 
 
+
 <div class="card">
-    <h3>Wireless Earbuds</h3>
-    <p>$29.99</p>
-    <button>Add To Cart</button>
+
+<h3>Wireless Earbuds</h3>
+
+<p>$29.99</p>
+
+<button onclick="addToCart()">
+Add To Cart
+</button>
+
 </div>
 
 
+
 <div class="card">
-    <h3>Gaming Mouse</h3>
-    <p>$19.99</p>
-    <button>Add To Cart</button>
+
+<h3>Gaming Mouse</h3>
+
+<p>$19.99</p>
+
+<button onclick="addToCart()">
+Add To Cart
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Bluetooth Speaker</h3>
+
+<p>$39.99</p>
+
+<button onclick="addToCart()">
+Add To Cart
+</button>
+
+</div>
+
+
 </div>
 
 </section>
 
 
+
+
+<!-- WhatsApp -->
+
+<a class="whatsapp"
+href="https://wa.me/923191346088?text=I%20am%20interested%20in%20your%20product"
+target="_blank">
+
+💬
+
+</a>
+
+
+
+<!-- Footer -->
+
 <footer>
-<p>© 2026 Elite Store. All Rights Reserved.</p>
+
+<h3>Elite Store</h3>
+
+<p>
+© 2026 Elite Store. All Rights Reserved.
+</p>
+
 </footer>
+
 
 
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
