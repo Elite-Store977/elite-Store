@@ -1,0 +1,91 @@
+// Elite Store Script
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Cart Count
+function updateCartCount() {
+    let cartCount = document.getElementById("cart");
+    if (cartCount) {
+        cartCount.innerHTML = cart.length;
+    }
+}
+
+updateCartCount();
+
+// Add To Cart
+function addToCart(product, price) {
+
+    cart.push({
+        name: product,
+        price: Number(price)
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    updateCartCount();
+
+    alert(product + " added to cart 🛒");
+}
+
+// Search
+function searchProduct() {
+
+    let input = document.getElementById("search").value.toLowerCase();
+    let products = document.getElementsByClassName("card");
+
+    for (let i = 0; i < products.length; i++) {
+
+        let text = products[i].innerText.toLowerCase();
+
+        if (text.includes(input)) {
+            products[i].style.display = "block";
+        } else {
+            products[i].style.display = "none";
+        }
+    }
+}
+
+// Category Filter
+function filterProducts(category) {
+
+    let products = document.getElementsByClassName("card");
+
+    for (let i = 0; i < products.length; i++) {
+
+        if (category === "all") {
+            products[i].style.display = "block";
+        } else if (products[i].classList.contains(category)) {
+            products[i].style.display = "block";
+        } else {
+            products[i].style.display = "none";
+        }
+    }
+}
+
+// Mobile Menu
+function menuToggle() {
+    let nav = document.querySelector("nav");
+    if (nav) {
+        nav.classList.toggle("active");
+    }
+}
+
+// Buy Now
+function buyNow() {
+    alert("Redirecting to Checkout 💳");
+}
+
+// Product Details
+function viewProduct() {
+    alert("Product Details Coming Soon 🛍️");
+}
+
+// Wishlist
+function wishlist(btn) {
+    btn.innerHTML = "❤️ Added";
+}
+
+// Dark Mode
+function darkMode() {
+    document.body.classList.toggle("dark");
+}
