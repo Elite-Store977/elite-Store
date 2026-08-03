@@ -1,7 +1,5 @@
 // Elite Store Script
 
-let cart = 0;
-
 
 // Add To Cart Function
 
@@ -130,5 +128,5 @@ function buyNow(){
 
 alert("Redirecting to Checkout 💳");
 
- alert("JS Connected ✅");   
+   
 }
