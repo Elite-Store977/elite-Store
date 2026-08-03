@@ -546,3 +546,53 @@ text-decoration:none;
 font-weight:bold;
 
 }
+.login{
+
+padding:60px 20px;
+
+text-align:center;
+
+}
+
+
+.login form{
+
+max-width:400px;
+
+margin:auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+
+.login input{
+
+padding:15px;
+
+border:1px solid #ddd;
+
+border-radius:8px;
+
+}
+
+
+.login button{
+
+padding:15px;
+
+background:#2563eb;
+
+color:white;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
