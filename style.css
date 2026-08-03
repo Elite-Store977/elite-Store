@@ -299,3 +299,67 @@ cursor:pointer;
 background:#be123c;
 
 }
+
+.trust{
+
+padding:50px 20px;
+
+text-align:center;
+
+}
+
+
+.trust-box{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+
+.trust-box div{
+
+background:white;
+
+padding:25px;
+
+width:220px;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+
+
+.reviews{
+
+padding:50px 20px;
+
+text-align:center;
+
+}
+
+
+
+.review-card{
+
+background:white;
+
+padding:25px;
+
+margin:20px auto;
+
+max-width:500px;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
