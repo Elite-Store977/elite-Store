@@ -130,4 +130,5 @@ function buyNow(){
 
 alert("Redirecting to Checkout 💳");
 
+ alert("JS Connected ✅");   
 }
