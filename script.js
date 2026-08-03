@@ -62,3 +62,36 @@ window.onload = function(){
     console.log("Welcome to Elite Store 🚀");
 
 }
+
+// Category Filter
+
+function filterProducts(category){
+
+let products = document.getElementsByClassName("card");
+
+
+for(let i=0; i<products.length; i++){
+
+
+if(category=="all"){
+
+products[i].style.display="block";
+
+}
+
+else if(products[i].classList.contains(category)){
+
+products[i].style.display="block";
+
+}
+
+else{
+
+products[i].style.display="none";
+
+}
+
+
+}
+
+}
