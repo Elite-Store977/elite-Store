@@ -224,6 +224,59 @@ nav{
 
 
 .card{
+
+    .categories{
+
+padding:40px 20px;
+
+text-align:center;
+
+}
+
+
+.category-box{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+
+.category-box div{
+
+background:white;
+
+padding:25px;
+
+width:150px;
+
+border-radius:15px;
+
+font-weight:bold;
+
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+.category-box div:hover{
+
+transform:translateY(-8px);
+
+background:#2563eb;
+
+color:white;
+
+}
     width:90%;
 }
 
