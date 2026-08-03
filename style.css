@@ -420,6 +420,18 @@ display:block;
 
 padding:10px;
 
+    .card button{
+
+margin:8px;
+
+}
+
+
+.card button:last-child{
+
+background:#f59e0b;
+
+}
 }
 
 
