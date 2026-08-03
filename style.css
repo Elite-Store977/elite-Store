@@ -281,3 +281,21 @@ color:white;
 }
 
 }
+
+.wish{
+
+margin-top:10px;
+padding:12px 25px;
+border:none;
+background:#e11d48;
+color:white;
+border-radius:8px;
+cursor:pointer;
+
+}
+
+.wish:hover{
+
+background:#be123c;
+
+}
