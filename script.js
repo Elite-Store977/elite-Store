@@ -105,3 +105,20 @@ let nav = document.querySelector("nav");
 nav.classList.toggle("active");
 
 }
+
+// Product Details
+
+function viewProduct(){
+
+alert("Product Details Page Coming Soon 🛍️");
+
+}
+
+
+// Buy Now
+
+function buyNow(){
+
+alert("Redirecting to Checkout 💳");
+
+}
