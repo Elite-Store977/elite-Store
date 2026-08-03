@@ -596,3 +596,61 @@ border-radius:8px;
 cursor:pointer;
 
 }
+
+.cart-page{
+
+padding:50px 20px;
+
+text-align:center;
+
+}
+
+
+.cart-item{
+
+background:white;
+
+max-width:500px;
+
+margin:20px auto;
+
+padding:25px;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+
+.cart-item input{
+
+padding:10px;
+
+width:70px;
+
+}
+
+
+.cart-item button{
+
+background:red;
+
+color:white;
+
+border:none;
+
+padding:10px 20px;
+
+border-radius:5px;
+
+cursor:pointer;
+
+}
+
+
+.cart-total{
+
+margin-top:30px;
+
+}
