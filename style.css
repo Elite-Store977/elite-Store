@@ -436,3 +436,59 @@ background:#f59e0b;
 
 
 }
+
+
+.checkout{
+
+padding:50px 20px;
+
+text-align:center;
+
+}
+
+
+.checkout form{
+
+max-width:500px;
+
+margin:auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+
+.checkout input,
+.checkout textarea,
+.checkout select{
+
+padding:15px;
+
+border:1px solid #ddd;
+
+border-radius:8px;
+
+font-size:16px;
+
+}
+
+
+.checkout button{
+
+padding:15px;
+
+background:#2563eb;
+
+color:white;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
