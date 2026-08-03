@@ -95,3 +95,13 @@ products[i].style.display="none";
 }
 
 }
+
+// Mobile Menu
+
+function menuToggle(){
+
+let nav = document.querySelector("nav");
+
+nav.classList.toggle("active");
+
+}
