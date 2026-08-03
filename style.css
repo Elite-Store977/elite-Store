@@ -654,3 +654,26 @@ cursor:pointer;
 margin-top:30px;
 
 }
+
+.cart-item{
+    background:white;
+    max-width:500px;
+    margin:20px auto;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.cart-item button{
+    margin-top:10px;
+    background:red;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.cart-item button:hover{
+    background:darkred;
+}
