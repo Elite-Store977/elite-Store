@@ -29,7 +29,7 @@ function addToCart(product, price){
 
     if(existing){
 
-        existing.quantity += 1;
+        existing.quantity = (existing.quantity || 1) + 1;
 
     }else{
 
