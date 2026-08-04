@@ -4,13 +4,23 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // Cart Count
 function updateCartCount() {
+
+    let count = 0;
+
+    cart.forEach(item => {
+        count += item.quantity || 1;
+    });
+
     let cartCount = document.getElementById("cart");
+
     if (cartCount) {
-        cartCount.innerHTML = cart.length;
+        cartCount.innerHTML = count;
     }
+
 }
 
-updateCartCount();
+
+
 
 // Add To Cart
 function addToCart(product, price){
