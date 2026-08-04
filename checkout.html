@@ -81,10 +81,14 @@ let products = "";
 
 cart.forEach(item => {
 
+if(item.name && item.price){
+
 products += 
 "%0A" + item.name +
 " | Qty: " + item.quantity +
 " | Price: $" + item.price;
+
+}
 
 });
 
