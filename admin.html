@@ -81,21 +81,6 @@ let box = document.getElementById("orders");
 
 let totalSales = 0;
 
-
-let pending = 0;
-let delivered = 0;
-
-orders.forEach(order => {
-
-if(order.status === "Delivered"){
-    delivered++;
-}else{
-    pending++;
-}
-
-});
-
-
 document.getElementById("totalOrders").innerHTML = orders.length;
 
 document.getElementById("pendingOrders").innerHTML = pending;
@@ -146,6 +131,21 @@ box.innerHTML += `
 `;
 
 });
+
+document.getElementById("totalOrders").innerHTML = orders.length;
+
+let pending = orders.filter(order => 
+order.status !== "Delivered"
+).length;
+
+let delivered = orders.filter(order =>
+order.status === "Delivered"
+).length;
+
+
+document.getElementById("pendingOrders").innerHTML = pending;
+
+document.getElementById("deliveredOrders").innerHTML = delivered;
 
 document.getElementById("sales").innerHTML =
 "Total Sales: $" + totalSales;
