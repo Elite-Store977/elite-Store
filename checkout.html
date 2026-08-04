@@ -66,6 +66,10 @@ let phone = document.querySelectorAll("input")[1].value;
 
 let address = document.querySelector("textarea").value;
 
+if(name == "" || phone == "" || address == ""){
+    alert("Please fill all details");
+    return;
+}
 
 let orderID = "ELITE-" + Math.floor(Math.random()*100000);
 
