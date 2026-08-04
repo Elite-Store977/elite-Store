@@ -50,7 +50,7 @@ if(cart.length === 0){
 
     cart.forEach((item,index)=>{
 
-        total += Number(item.price);
+       total += Number(item.price) * (item.quantity || 1);
 
         cartBox.innerHTML += `
         <div class="cart-item">
