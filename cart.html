@@ -55,7 +55,17 @@ if(cart.length === 0){
         cartBox.innerHTML += `
         <div class="cart-item">
             <h3>${item.name}</h3>
-            <p>Price: $${item.price}</p>
+
+           <p>Price: $${item.price}</p>
+
+<p>
+Quantity:
+<button onclick="changeQty(${index},-1)">➖</button>
+
+<b>${item.quantity || 1}</b>
+
+<button onclick="changeQty(${index},1)">➕</button>
+</p>
 
             <button onclick="removeItem(${index})">
                 ❌ Remove
