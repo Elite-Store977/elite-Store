@@ -112,3 +112,5 @@ function wishlist(btn) {
 function darkMode() {
     document.body.classList.toggle("dark");
 }
+
+updateCartCount();
