@@ -23,6 +23,8 @@
 
 <h2>Orders</h2>
 
+<h3 id="sales">Total Sales: $0</h3>
+  
 <div id="orders"></div>
 
 </section>
@@ -36,9 +38,14 @@ console.log(orders);
   
 let box = document.getElementById("orders");
 
+let totalSales = 0;
 
 orders.forEach((order,index) => {
 
+if(order.status === "Delivered"){
+    totalSales += Number(order.total || 0);
+}
+  
 box.innerHTML += `
 
 <div class="cart-card">
@@ -65,11 +72,14 @@ box.innerHTML += `
 
 </div>
 
+
 `;
 
 });
 
-
+document.getElementById("sales").innerHTML =
+"Total Sales: $" + totalSales;
+  
 function completeOrder(index){
 
 orders[index].status = "Delivered";
