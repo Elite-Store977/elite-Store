@@ -25,6 +25,12 @@
 
 <h2 id="total">Total: $0</h2>
 
+    <button onclick="clearCart()">
+🗑️ Clear Cart
+</button>
+
+<br><br>
+    
 <a href="checkout.html">
     <button>Proceed To Checkout 💳</button>
 </a>
@@ -106,6 +112,13 @@ function removeItem(index){
 
 }
 
+    function clearCart(){
+
+    localStorage.removeItem("cart");
+
+    location.reload();
+
+}
 </script>
 
 </body>
