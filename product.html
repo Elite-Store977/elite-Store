@@ -50,9 +50,8 @@
 <h3 id="productPrice">$0</h3>
 
 
-<p>
-This premium smart watch comes with modern design,
-health tracking features and long battery life.
+<p id="productDescription">
+Product description
 </p>
 
 
@@ -141,7 +140,26 @@ function buyProduct(){
 buyNow(name,Number(price));
 
 }
+let descriptions = {
 
+"Smart Watch":
+"Premium smart watch with health tracking, fitness modes and long battery life.",
+
+"Wireless Earbuds":
+"High quality wireless earbuds with clear sound and noise reduction.",
+
+"Gaming Mouse":
+"Fast gaming mouse with accurate control and comfortable design.",
+
+"Bluetooth Speaker":
+"Portable Bluetooth speaker with powerful sound and long battery backup."
+
+};
+
+
+document.getElementById("productDescription").innerHTML =
+descriptions[name] || "Premium quality product from Elite Store.";
+  
 </script>
 
 
