@@ -87,6 +87,13 @@ Place Order ✅
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+ if(cart.length === 0){
+
+alert("Your cart is empty 🛒");
+
+window.location.href="cart.html";
+
+} 
 
 let orderItems = document.getElementById("orderItems");
 
