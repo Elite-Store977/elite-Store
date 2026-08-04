@@ -73,7 +73,7 @@ onkeyup="searchOrders()">
 
 let orders = JSON.parse(localStorage.getItem("orders")) || [];
     
-orders.reverse
+orders.reverse();
     
 console.log(orders);
   
@@ -81,10 +81,31 @@ let box = document.getElementById("orders");
 
 let totalSales = 0;
 
+
+let pending = 0;
+let delivered = 0;
+
+orders.forEach(order => {
+
+if(order.status === "Delivered"){
+    delivered++;
+}else{
+    pending++;
+}
+
+});
+
+
+document.getElementById("totalOrders").innerHTML = orders.length;
+
+document.getElementById("pendingOrders").innerHTML = pending;
+
+document.getElementById("deliveredOrders").innerHTML = delivered;
+    
 orders.forEach((order,index) => {
 
 if(order.status === "Delivered"){
-    totalSales += Number(order.total || 0);
+   totalSales += Number(order.grandTotal || 0);
 }
   
 box.innerHTML += `
