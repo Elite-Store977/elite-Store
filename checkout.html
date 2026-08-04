@@ -66,6 +66,8 @@ let phone = document.querySelectorAll("input")[1].value;
 
 let address = document.querySelector("textarea").value;
 
+let payment = document.querySelector("select").value;
+
 if(name == "" || phone == "" || address == ""){
     alert("Please fill all details");
     return;
@@ -76,35 +78,47 @@ let orderID = "ELITE-" + Math.floor(Math.random()*100000);
 
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
+    
+if (cart.length === 0) {
+    alert("Your cart is empty!");
+    return;
+}
+    
 let products = "";
 
 let total = 0;
+
+let delivery = 5;   // Delivery Charges
     
 cart.forEach(item => {
 
 total += item.price * item.quantity;
 
-products += 
-"%0A" + item.name +
+products +=
+"\n" + item.name +
 " | Qty: " + item.quantity +
 " | Price: $" + item.price;
-
+   
 });
-
+    
+let grandTotal = total + delivery;
 
 let message =
-"🛍️ Elite Store New Order%0A%0A" +
+"🛍️ Elite Store New Order\n\n" +
 "Order ID: " + orderID +
-"%0A%0AProducts:" +
-products +
-"%0A%0AName: " + name +
-"%0APhone: " + phone +
-"%0AAddress: " + address;
-
-
+"\nDate: " + new Date().toLocaleString() +
+"\n\nProducts:" +
+products.replaceAll("%0A", "\n") +
+"\n\nName: " + name +
+"\nPhone: " + phone +
+"\nAddress: " + address +
+"\nPayment: " + payment +
+"\n\nSubtotal: $" + total +
+"\nDelivery: $" + delivery +
+"\nGrand Total: $" + grandTotal;
+    
 window.open(
-"https://wa.me/923191346088?text=" + message,
+"https://wa.me/923191346088?text=" + encodeURIComponent(message),
 "_blank"
 );
 
@@ -121,23 +135,31 @@ phone: phone,
 
 address: address,
 
+payment: payment,
+
 products: products,
 
-total: total
+total: total,
 
-date: new Date().toLocaleString(),
-    
+delivery: delivery,
+
+grandTotal: grandTotal,
+
+date: new Date().toLocaleString()
+
 });
-
 
 localStorage.setItem("orders", JSON.stringify(orders));
 
-console.log(localStorage.getItem("orders"));
-    
 localStorage.removeItem("cart");
 
+alert("Order Placed Successfully ✅");
+
+setTimeout(() => {
+    window.location.href = "index.html";
+}, 1000);
+
 }
-  
 
 </script>
 
