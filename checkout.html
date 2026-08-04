@@ -79,16 +79,16 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 let products = "";
 
+let total = 0;
+    
 cart.forEach(item => {
 
-if(item.name && item.price){
+total += item.price * item.quantity;
 
 products += 
 "%0A" + item.name +
 " | Qty: " + item.quantity +
 " | Price: $" + item.price;
-
-}
 
 });
 
@@ -121,8 +121,10 @@ phone: phone,
 
 address: address,
 
-products: products
+products: products,
 
+total: total
+    
 });
 
 
