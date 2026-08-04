@@ -75,9 +75,27 @@ let orderID = "ELITE-" + Math.floor(Math.random()*100000);
 
 
 let message =
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let products = "";
+
+cart.forEach(item => {
+
+products += 
+"%0A" + item.name +
+" | Qty: " + item.quantity +
+" | Price: $" + item.price;
+
+});
+
+
+let message =
 "🛍️ Elite Store New Order%0A%0A" +
 "Order ID: " + orderID +
-"%0AName: " + name +
+"%0A%0AProducts:" +
+products +
+"%0A%0AName: " + name +
 "%0APhone: " + phone +
 "%0AAddress: " + address;
 
