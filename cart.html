@@ -73,10 +73,21 @@ Price: $${item.price}
 Quantity: ${item.quantity}
 </p>
 
+<button onclick="changeQuantity('${item.name}', -1)">
+➖
+</button>
+
+<button onclick="changeQuantity('${item.name}', 1)">
+➕
+</button>
+
+<button onclick="removeItem('${item.name}')">
+❌ Remove
+</button>
+
 </div>
 
 `;
-
 });
 
 
