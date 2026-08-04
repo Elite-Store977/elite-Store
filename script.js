@@ -107,7 +107,6 @@ function buyNow(product, price) {
     window.location.href = "checkout.html";
 
 }
-}
 
 // Product Details
 function viewProduct() {
