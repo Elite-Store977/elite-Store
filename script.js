@@ -13,19 +13,32 @@ function updateCartCount() {
 updateCartCount();
 
 // Add To Cart
-function addToCart(product, price) {
+function addToCart(product, price){
 
-    cart.push({
-        name: product,
-        price: Number(price)
-    });
+    let existing = cart.find(item => item.name === product);
+
+    if(existing){
+
+        existing.quantity += 1;
+
+    }else{
+
+        cart.push({
+            name: product,
+            price: Number(price),
+            quantity: 1
+        });
+
+    }
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
     updateCartCount();
 
     alert(product + " added to cart 🛒");
+
 }
+
 
 // Search
 function searchProduct() {
