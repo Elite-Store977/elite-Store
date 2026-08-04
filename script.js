@@ -96,11 +96,22 @@ function menuToggle() {
 // Buy Now
 function buyNow(product, price) {
 
-    cart.push({
-        name: product,
-        price: Number(price),
-        quantity: 1
-    });
+    let existing = cart.find(item => item.name === product);
+
+    if(existing){
+
+        existing.quantity = (existing.quantity || 1) + 1;
+
+    }else{
+
+        cart.push({
+            name: product,
+            price: Number(price),
+            quantity: 1
+        });
+
+    }
+
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
