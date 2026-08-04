@@ -67,9 +67,13 @@ let phone = document.querySelectorAll("input")[1].value;
 let address = document.querySelector("textarea").value;
 
 
+let orderID = "ELITE-" + Math.floor(Math.random()*100000);
+
+
 let message =
-"New Order - Elite Store%0A%0A" +
-"Name: " + name +
+"🛍️ Elite Store New Order%0A%0A" +
+"Order ID: " + orderID +
+"%0AName: " + name +
 "%0APhone: " + phone +
 "%0AAddress: " + address;
 
@@ -83,7 +87,7 @@ window.open(
 localStorage.removeItem("cart");
 
 }
-}
+  
 
 </script>
 
