@@ -149,3 +149,9 @@ if(cart.length === 0){
 window.location.href="checkout.html";
 
 }
+
+function openCart(){
+
+window.location.href="checkout.html";
+
+}
