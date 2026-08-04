@@ -61,7 +61,7 @@ Add To Cart 🛒
 </button>
 
 
-<button>
+<button onclick="buyProduct()">
 Buy Now ⚡
 </button>
 
@@ -135,7 +135,12 @@ function addProductToCart(){
 addToCart(name,Number(price));
 
 }
+  
+function buyProduct(){
 
+buyNow(name,Number(price));
+
+}
 
 </script>
 
