@@ -95,7 +95,8 @@ function menuToggle() {
 
 // Buy Now
 function buyNow() {
-    alert("Redirecting to Checkout 💳");
+    window.location.href = "checkout.html";
+}
 }
 
 // Product Details
