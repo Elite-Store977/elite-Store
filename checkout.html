@@ -15,6 +15,7 @@
 
 <body>
 
+
 <header>
 
 <h1>💳 Checkout</h1>
@@ -26,8 +27,10 @@ Back To Shop
 </header>
 
 
+
 <section class="checkout">
-    
+
+
 <div class="cart-summary">
 
 <h2>Your Order</h2>
@@ -37,19 +40,26 @@ Back To Shop
 <h3 id="orderTotal"></h3>
 
 </div>
-    
+
+
+
 <h2>Customer Information</h2>
 
-<input type="text" placeholder="Full Name">
 
-<input type="text" placeholder="Phone Number">
+<input id="name" type="text" placeholder="Full Name">
 
-<textarea placeholder="Complete Address"></textarea>
+
+<input id="phone" type="text" placeholder="Phone Number">
+
+
+<textarea id="address" placeholder="Complete Address"></textarea>
+
 
 
 <h2>Payment</h2>
 
-<select>
+
+<select id="payment">
 
 <option>Cash On Delivery</option>
 
@@ -58,108 +68,249 @@ Back To Shop
 </select>
 
 
+
 <button onclick="placeOrder()">
+
 Place Order ✅
+
 </button>
+
 
 
 </section>
 
 
+
+
 <script>
+
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-let items = document.getElementById("orderItems");
 
-let totalBox = document.getElementById("orderTotal");
+let orderItems = document.getElementById("orderItems");
 
-let total = 0;
+let orderTotal = document.getElementById("orderTotal");
+
+
+let subtotal = 0;
+
+let delivery = 5;
+
+
+
+// Show Cart
+
+
+if(cart.length === 0){
+
+
+orderItems.innerHTML =
+
+"<p>Your cart is empty!</p>";
+
+
+orderTotal.innerHTML =
+
+"Total: $0";
+
+
+}
+
 
 
 cart.forEach(item => {
 
-total += item.price * item.quantity;
+
+let qty = item.quantity || 1;
 
 
-items.innerHTML += 
+let price = item.price * qty;
+
+
+subtotal += price;
+
+
+
+orderItems.innerHTML +=
+
 `
+
 <p>
-${item.name} 
-x ${item.quantity}
-= $${item.price * item.quantity}
+
+${item.name}
+
+x ${qty}
+
+= $${price}
+
 </p>
+
 `;
 
+
+
 });
 
 
-totalBox.innerHTML = "Total: $" + total;
-    
+
+let grandTotal = subtotal + delivery;
+
+
+
+if(cart.length > 0){
+
+
+orderTotal.innerHTML =
+
+`
+
+Subtotal: $${subtotal}
+
+<br>
+
+Delivery: $${delivery}
+
+<br>
+
+<b>Grand Total: $${grandTotal}</b>
+
+`;
+
+
+
+}
+
+
+
+
 function placeOrder(){
 
-let name = document.querySelector("input").value;
 
-let phone = document.querySelectorAll("input")[1].value;
 
-let address = document.querySelector("textarea").value;
+if(cart.length === 0){
 
-let payment = document.querySelector("select").value;
 
-if(name == "" || phone == "" || address == ""){
-    alert("Please fill all details");
-    return;
+alert("Your cart is empty!");
+
+return;
+
+
 }
 
-let orderID = "ELITE-" + Math.floor(Math.random()*100000);
 
-    
-if (cart.length === 0) {
-    alert("Your cart is empty!");
-    return;
+
+let name = document.getElementById("name").value;
+
+let phone = document.getElementById("phone").value;
+
+let address = document.getElementById("address").value;
+
+let payment = document.getElementById("payment").value;
+
+
+
+if(name=="" || phone=="" || address==""){
+
+
+alert("Please fill all details");
+
+return;
+
+
 }
-    
+
+
+
+
+let orderID =
+
+"ELITE-" + Math.floor(Math.random()*100000);
+
+
+
 let products = "";
 
-let total = 0;
 
-let delivery = 5;   // Delivery Charges
-    
-cart.forEach(item => {
 
-total += item.price * item.quantity;
+cart.forEach(item=>{
+
 
 products +=
-"\n" + item.name +
-" | Qty: " + item.quantity +
-" | Price: $" + item.price;
-   
+
+"\n" +
+
+item.name +
+
+" | Qty: " +
+
+(item.quantity || 1) +
+
+" | Price: $" +
+
+item.price;
+
+
+
 });
-    
-let grandTotal = total + delivery;
+
+
+
+
 
 let message =
+
+
 "🛍️ Elite Store New Order\n\n" +
+
 "Order ID: " + orderID +
+
 "\nDate: " + new Date().toLocaleString() +
+
 "\n\nProducts:" +
-products.replaceAll("%0A", "\n") +
+
+products +
+
 "\n\nName: " + name +
+
 "\nPhone: " + phone +
+
 "\nAddress: " + address +
+
 "\nPayment: " + payment +
-"\n\nSubtotal: $" + total +
+
+"\n\nSubtotal: $" + subtotal +
+
 "\nDelivery: $" + delivery +
+
 "\nGrand Total: $" + grandTotal;
-    
+
+
+
+
 window.open(
-"https://wa.me/923191346088?text=" + encodeURIComponent(message),
+
+"https://wa.me/923191346088?text=" +
+
+encodeURIComponent(message),
+
 "_blank"
+
 );
+
+
+
+
+
+// Save Orders
 
 
 let orders = JSON.parse(localStorage.getItem("orders")) || [];
 
+
+
 orders.push({
+
 
 id: orderID,
 
@@ -173,7 +324,7 @@ payment: payment,
 
 products: products,
 
-total: total,
+subtotal: subtotal,
 
 delivery: delivery,
 
@@ -181,22 +332,48 @@ grandTotal: grandTotal,
 
 date: new Date().toLocaleString()
 
+
+
 });
 
-localStorage.setItem("orders", JSON.stringify(orders));
+
+
+localStorage.setItem(
+
+"orders",
+
+JSON.stringify(orders)
+
+);
+
+
+
 
 localStorage.removeItem("cart");
 
+
+
 alert("Order Placed Successfully ✅");
 
-setTimeout(() => {
-    window.location.href = "index.html";
-}, 1000);
+
+
+setTimeout(()=>{
+
+
+window.location.href="index.html";
+
+
+},1000);
+
+
 
 }
+
 
 </script>
 
 
+
 </body>
+
 </html>
