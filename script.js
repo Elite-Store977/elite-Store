@@ -113,4 +113,5 @@ function darkMode() {
     document.body.classList.toggle("dark");
 }
 
+console.log(cart);
 updateCartCount();
