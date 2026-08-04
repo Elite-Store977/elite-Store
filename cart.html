@@ -91,6 +91,16 @@ let box = document.getElementById("cart-items");
 
 let total = 0;
 
+ if(cart.length === 0){
+
+box.innerHTML = "<h3>Your Cart Is Empty 🛒</h3>";
+
+document.getElementById("total").innerHTML =
+"Total: $0";
+
+return;
+
+} 
 
 cart.forEach(item => {
 
@@ -137,6 +147,18 @@ document.getElementById("total").innerHTML =
 
 
 function checkout(){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+if(cart.length === 0){
+
+alert("Your cart is empty 🛒");
+
+return;
+
+}
+
 
 window.location.href="checkout.html";
 
