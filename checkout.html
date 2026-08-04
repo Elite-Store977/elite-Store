@@ -1,67 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Checkout | Elite Store</title>
+
+<title>Elite Store | Checkout</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
 <header>
-    <h1>🛍️ Elite Store</h1>
 
-    <a href="cart.html">
-        <button>⬅ Back To Cart</button>
-    </a>
+<h1>💳 Checkout</h1>
+
+<a href="index.html">
+Back To Shop
+</a>
+
 </header>
+
 
 <section class="checkout">
 
-<h2>Checkout 💳</h2>
+<h2>Customer Information</h2>
 
-<form onsubmit="placeOrder(event)">
+<input type="text" placeholder="Full Name">
 
-<input type="text" placeholder="Full Name" required>
+<input type="text" placeholder="Phone Number">
 
-<input type="tel" placeholder="Phone Number" required>
+<textarea placeholder="Complete Address"></textarea>
 
-<input type="email" placeholder="Email Address" required>
 
-<textarea placeholder="Full Address" required></textarea>
+<h2>Payment</h2>
 
-<select required>
-    <option value="">Select Payment Method</option>
-    <option>Cash On Delivery</option>
-    <option>Bank Transfer</option>
+<select>
+
+<option>Cash On Delivery</option>
+
+<option>Online Payment</option>
+
 </select>
 
-<button type="submit">
+
+<button onclick="placeOrder()">
 Place Order ✅
 </button>
 
-</form>
 
 </section>
 
-<footer>
-<p>© 2026 Elite Store</p>
-</footer>
 
 <script>
-function placeOrder(event){
 
-    event.preventDefault();
+function placeOrder(){
 
-    alert("🎉 Order Placed Successfully!");
+alert("Order Placed Successfully 🎉");
 
-    localStorage.removeItem("cart");
+localStorage.removeItem("cart");
 
-    window.location.href = "index.html";
+window.location.href="index.html";
 
 }
+
 </script>
+
 
 </body>
 </html>
