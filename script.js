@@ -94,8 +94,18 @@ function menuToggle() {
 }
 
 // Buy Now
-function buyNow() {
+function buyNow(product, price) {
+
+    cart.push({
+        name: product,
+        price: Number(price),
+        quantity: 1
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
     window.location.href = "checkout.html";
+
 }
 }
 
