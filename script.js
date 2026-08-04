@@ -126,3 +126,15 @@ function darkMode() {
 console.log(cart);
 updateCartCount();
 
+function goCheckout(){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+if(cart.length === 0){
+    alert("Cart empty hai!");
+    return;
+}
+
+window.location.href="checkout.html";
+
+}
