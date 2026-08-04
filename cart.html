@@ -77,6 +77,23 @@ Quantity:
 
 }
 
+function changeQty(index, value){
+
+    if(!cart[index].quantity){
+        cart[index].quantity = 1;
+    }
+
+    cart[index].quantity += value;
+
+    if(cart[index].quantity <= 0){
+        cart.splice(index,1);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    location.reload();
+
+}
 document.getElementById("total").innerHTML = "Total: $" + total;
 
 function removeItem(index){
