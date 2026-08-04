@@ -37,18 +37,17 @@
 <section class="product-detail">
 
 
-<img src="https://via.placeholder.com/400">
-
+<img id="productImage" src="">
 
 <div class="info">
 
-<h2>Premium Smart Watch</h2>
-
+<h2 id="productName">Product Name</h2>
+  
 <div>
 ⭐⭐⭐⭐⭐
 </div>
 
-<h3>$49.99</h3>
+<h3 id="productPrice">$0</h3>
 
 
 <p>
@@ -57,7 +56,7 @@ health tracking features and long battery life.
 </p>
 
 
-<button onclick="addToCart()">
+<button onclick="addProductToCart()">
 Add To Cart 🛒
 </button>
 
@@ -100,6 +99,45 @@ Buy Now ⚡
 
 
 <script src="script.js"></script>
+
+
+<script>
+
+let params = new URLSearchParams(window.location.search);
+
+let name = params.get("name");
+let price = params.get("price");
+
+
+document.getElementById("productName").innerHTML = name;
+
+document.getElementById("productPrice").innerHTML = "$" + price;
+
+
+let images = {
+
+"Smart Watch":"audionic-the-sound-master-black-dany-amoled-pulse-pro-smart-watch-36385408090268copy.webp",
+
+"Wireless Earbuds":"248f59e7fd0d996952abb9a5bb2ee32c.jpg",
+
+"Gaming Mouse":"m9_gaming_mouse_studio-1024x1024.webp",
+
+"Bluetooth Speaker":"002f18ec-c5f2-4040-be3d-88cefaba30eb.webp"
+
+};
+
+
+document.getElementById("productImage").src = images[name];
+
+
+function addProductToCart(){
+
+addToCart(name,Number(price));
+
+}
+
+
+</script>
 
 
 </body>
