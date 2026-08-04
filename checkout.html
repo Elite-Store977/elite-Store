@@ -105,6 +105,25 @@ window.open(
 );
 
 
+let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+orders.push({
+
+id: orderID,
+
+name: name,
+
+phone: phone,
+
+address: address,
+
+products: products
+
+});
+
+
+localStorage.setItem("orders", JSON.stringify(orders));
+    
 localStorage.removeItem("cart");
 
 }
