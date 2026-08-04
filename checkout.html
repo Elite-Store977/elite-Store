@@ -27,7 +27,17 @@ Back To Shop
 
 
 <section class="checkout">
+    
+<div class="cart-summary">
 
+<h2>Your Order</h2>
+
+<div id="orderItems"></div>
+
+<h3 id="orderTotal"></h3>
+
+</div>
+    
 <h2>Customer Information</h2>
 
 <input type="text" placeholder="Full Name">
@@ -57,7 +67,34 @@ Place Order ✅
 
 
 <script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+let items = document.getElementById("orderItems");
+
+let totalBox = document.getElementById("orderTotal");
+
+let total = 0;
+
+
+cart.forEach(item => {
+
+total += item.price * item.quantity;
+
+
+items.innerHTML += 
+`
+<p>
+${item.name} 
+x ${item.quantity}
+= $${item.price * item.quantity}
+</p>
+`;
+
+});
+
+
+totalBox.innerHTML = "Total: $" + total;
+    
 function placeOrder(){
 
 let name = document.querySelector("input").value;
@@ -75,9 +112,6 @@ if(name == "" || phone == "" || address == ""){
 
 let orderID = "ELITE-" + Math.floor(Math.random()*100000);
 
-
-
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
     
 if (cart.length === 0) {
     alert("Your cart is empty!");
