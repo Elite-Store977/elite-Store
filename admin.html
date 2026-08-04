@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Elite Store | Admin</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>🛍️ Elite Store Admin</h1>
+</header>
+
+
+<section>
+
+<h2>Orders</h2>
+
+<div id="orders"></div>
+
+</section>
+
+
+<script>
+
+let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+let box = document.getElementById("orders");
+
+
+orders.forEach(order => {
+
+box.innerHTML += `
+
+<div class="cart-card">
+
+<h3>Order ID: ${order.id}</h3>
+
+<p>Customer: ${order.name}</p>
+
+<p>Phone: ${order.phone}</p>
+
+<p>Address: ${order.address}</p>
+
+<p>Products: ${order.products}</p>
+
+</div>
+
+`;
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>
