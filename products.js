@@ -51,4 +51,14 @@ const products = [
         
 },
 
+{
+       
+    name:"Women Suit",
+    price:20,
+    image:"suit.webp",
+    category:"fashion",
+    description:"2 Pcs Women's Unstitched Printed Suit."
+        
+},
+
 ];
