@@ -739,3 +739,187 @@ section button{
 section button:hover{
     background:#1d4ed8;
 }
+
+/* =========================================
+   ELITE STORE CSS V2 - FINAL PART
+========================================= */
+
+/* Smooth Animation */
+
+*{
+    transition:0.3s ease;
+}
+
+/* Buttons */
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+/* Images */
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.card img:hover,
+.product-detail img:hover{
+    transform:scale(1.05);
+}
+
+/* Links */
+
+a{
+    transition:.3s;
+}
+
+a:hover{
+    opacity:.9;
+}
+
+/* Form Focus */
+
+input:focus,
+textarea:focus,
+select:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0 0 8px rgba(37,99,235,.25);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#eee;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#1d4ed8;
+}
+
+/* Dark Mode */
+
+body.dark{
+    background:#111827;
+    color:#fff;
+}
+
+body.dark header,
+body.dark footer{
+    background:#000;
+}
+
+body.dark .card,
+body.dark .cart-card,
+body.dark .card-box,
+body.dark .review-card,
+body.dark .cart-summary,
+body.dark form{
+    background:#1f2937;
+    color:#fff;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select{
+    background:#374151;
+    color:#fff;
+    border:1px solid #555;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    text-align:center;
+    gap:15px;
+}
+
+nav{
+    flex-direction:column;
+    width:100%;
+}
+
+.hero{
+    padding:60px 15px;
+}
+
+.hero h2{
+    font-size:30px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.search input{
+    width:95%;
+}
+
+.product-box{
+    grid-template-columns:1fr;
+}
+
+.product-detail{
+    flex-direction:column;
+}
+
+.product-detail img{
+    width:90%;
+}
+
+.dashboard{
+    grid-template-columns:1fr;
+}
+
+.checkout,
+.cart-page,
+.contact,
+.login{
+    width:95%;
+    padding:20px;
+}
+
+.checkout button,
+.contact button,
+.login button{
+    width:100%;
+}
+
+.card button{
+    width:100%;
+}
+
+.cart-card button{
+    width:100%;
+    margin:8px 0;
+}
+
+.category-box,
+.trust-box{
+    flex-direction:column;
+    align-items:center;
+}
+
+.whatsapp{
+    width:55px;
+    height:55px;
+    font-size:28px;
+}
+
+}
+
+/* End */
