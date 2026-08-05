@@ -11,7 +11,7 @@ const products = [
 {
     name:"Wireless Earbuds",
     price:35,
-    image:"images/earbuds.jpg",
+    image:"wireless earbud.jpg",
     category:"electronics",
     description:"Crystal clear sound with long battery."
 },
@@ -19,7 +19,7 @@ const products = [
 {
     name:"Gaming Mouse",
     price:25,
-    image:"images/mouse.webp",
+    image:"",
     category:"electronics",
     description:"RGB Gaming Mouse with high precision."
 },
