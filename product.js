@@ -33,9 +33,9 @@ const products = [
 }
 
 {
-    name:"cere v",
+    name:"Cera Ve",
     price:30,
-    image:"",
-    category:"speaker",
-    description:"Portable speaker with deep bass."
+    image:"MZ1304200184ZETS-media-1.jpg",
+    category:"skin care",
+    description:"Best Skin care Product."
 },
