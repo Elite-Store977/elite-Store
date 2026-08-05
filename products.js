@@ -3,7 +3,7 @@ const products = [
 {
     name:"Smart Watch",
     price:50,
-    image:"images/watch.webp",
+    image:"audionic-the-sound-master-black-dany-amoled-pulse-pro-smart-watch-36385408090268copy.webp",
     category:"electronics",
     description:"Premium Smart Watch with fitness tracking."
 },
