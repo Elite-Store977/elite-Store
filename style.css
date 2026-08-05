@@ -238,3 +238,148 @@ button:hover{
 .wish:hover{
     background:#be123c !important;
 }
+
+/* =========================
+   Categories
+========================= */
+
+.categories{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.categories h2{
+    font-size:34px;
+    margin-bottom:35px;
+}
+
+.category-box{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.category-box div{
+    background:#fff;
+    width:180px;
+    padding:30px 20px;
+    border-radius:18px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.category-box div:hover{
+    background:#2563eb;
+    color:#fff;
+    transform:translateY(-8px);
+}
+
+/* =========================
+   Trust Section
+========================= */
+
+.trust{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.trust h2{
+    font-size:34px;
+    margin-bottom:35px;
+}
+
+.trust-box{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.trust-box div{
+    background:#fff;
+    width:240px;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.trust-box div:hover{
+    transform:translateY(-8px);
+}
+
+/* =========================
+   Reviews
+========================= */
+
+.reviews{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.reviews h2{
+    font-size:34px;
+    margin-bottom:35px;
+}
+
+.review-card{
+    max-width:650px;
+    margin:20px auto;
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+    background:#111827;
+    color:#fff;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:60px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+footer a{
+    color:#f59e0b;
+    text-decoration:none;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+/* WhatsApp Floating Button */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:65px;
+    height:65px;
+    background:#25D366;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    font-size:32px;
+    text-decoration:none;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
