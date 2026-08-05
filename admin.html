@@ -63,7 +63,15 @@ type="text"
 id="search"
 placeholder="🔍 Search by Name or Phone..."
 onkeyup="searchOrders()">
-    
+
+<button onclick="exportOrders()">
+📥 Export Orders
+</button>
+
+<button onclick="clearOrders()">
+🗑️ Clear All Orders
+</button>
+
 <div id="orders"></div>
 
 </section>
@@ -111,7 +119,15 @@ box.innerHTML += `
 
 <p>Date: ${order.date}</p>
 
-<p>Status: ${order.status || "Pending"}</p>
+<p>
+Status:
+<span style="
+color:${order.status=="Delivered" ? "green" : "orange"};
+font-weight:bold;
+">
+${order.status || "Pending"}
+</span>
+</p>
 
 <button onclick="completeOrder(${index})">
 ✅ Delivered
@@ -188,6 +204,40 @@ cards[i].style.display="block";
 cards[i].style.display="none";
 
 }
+
+}
+
+}
+
+function exportOrders(){
+
+let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+let data = JSON.stringify(orders, null, 2);
+
+let blob = new Blob([data], {type:"application/json"});
+
+let link = document.createElement("a");
+
+link.href = URL.createObjectURL(blob);
+
+link.download = "EliteStoreOrders.json";
+
+link.click();
+
+}
+
+function clearOrders(){
+
+let confirmDelete = confirm("Are you sure you want to delete all orders?");
+
+if(confirmDelete){
+
+localStorage.removeItem("orders");
+
+alert("All Orders Deleted Successfully ✅");
+
+location.reload();
 
 }
 
