@@ -33,9 +33,10 @@ const products = [
 },
 
 {
+       
     name:"Cera Ve",
     price:30,
-    image:"images/Cera Ve.jpg",
+    image:"Cera Ve.jpg",
     category:"beauty",
     description:"Best Skin care Product."
 }
