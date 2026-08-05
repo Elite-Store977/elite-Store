@@ -30,7 +30,7 @@ const products = [
     image:"images/speaker.webp",
     category:"speaker",
     description:"Portable speaker with deep bass."
-}
+},
 
 {
     name:"Cera Ve",
@@ -38,4 +38,6 @@ const products = [
     image:"cera Ve.jpg",
     category:"skin care",
     description:"Best Skin care Product."
-},
+}
+    
+];
