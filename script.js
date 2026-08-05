@@ -192,13 +192,34 @@ let container = document.getElementById("product-container");
 
 if(container){
     products.forEach(product => {
+
         container.innerHTML += `
         <div class="card ${product.category}">
+
             <img src="${product.image}">
+
             <h3>${product.name}</h3>
+
             <p>$${product.price}</p>
+
             <p>${product.description}</p>
+
+            <button onclick="addToCart('${product.name}',${product.price})">
+            Add To Cart 🛒
+            </button>
+
+            <a href="product.html?name=${product.name}&price=${product.price}">
+            <button>
+            View Details
+            </button>
+            </a>
+
+            <button onclick="buyNow('${product.name}',${product.price})">
+            Buy Now ⚡
+            </button>
+
         </div>
         `;
+
     });
 }
