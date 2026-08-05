@@ -19,7 +19,7 @@ const products = [
 {
     name:"Gaming Mouse",
     price:25,
-    image:"",
+    image:"m9_gaming_mouse_studio-1024x1024.webp",
     category:"electronics",
     description:"RGB Gaming Mouse with high precision."
 },
@@ -27,7 +27,7 @@ const products = [
 {
     name:"Bluetooth Speaker",
     price:45,
-    image:"images/speaker.webp",
+    image:"bluetooth speaker.webp",
     category:"electronics",
     description:"Portable speaker with deep bass."
 },
@@ -35,7 +35,7 @@ const products = [
 {
     name:"Cera Ve",
     price:30,
-    image:"images/cera Ve.jpg",
+    image:"images/Cera Ve.jpg",
     category:"beauty",
     description:"Best Skin care Product."
 }
