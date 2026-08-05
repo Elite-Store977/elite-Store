@@ -187,3 +187,25 @@ return;
 
 window.location.href="cart.html";
 }
+
+let container = document.getElementById("product-container");
+
+products.forEach(product => {
+
+container.innerHTML += `
+<div class="card ${product.category}">
+
+<img src="${product.image}">
+
+<h3>${product.name}</h3>
+
+<p>$${product.price}</p>
+
+<p>${product.description}</p>
+
+<button>Add To Cart 🛒</button>
+
+</div>
+`;
+
+});
