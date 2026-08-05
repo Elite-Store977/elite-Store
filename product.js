@@ -32,4 +32,10 @@ const products = [
     description:"Portable speaker with deep bass."
 }
 
-];
+{
+    name:"cere v",
+    price:30,
+    image:"",
+    category:"speaker",
+    description:"Portable speaker with deep bass."
+},
