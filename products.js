@@ -44,7 +44,7 @@ const products = [
 {
        
     name:"Night Cream",
-    price:600,
+    price:15,
     image:"night cream.webp",
     category:"beauty",
     description:"Night Cream 50ml Bright White Clear Skin for Pakistani Skin."
