@@ -80,13 +80,7 @@ console.log(orders);
 let box = document.getElementById("orders");
 
 let totalSales = 0;
-
-document.getElementById("totalOrders").innerHTML = orders.length;
-
-document.getElementById("pendingOrders").innerHTML = pending;
-
-document.getElementById("deliveredOrders").innerHTML = delivered;
-    
+  
 orders.forEach((order,index) => {
 
 if(order.status === "Delivered"){
@@ -196,7 +190,7 @@ cards[i].style.display="none";
 }
 
 }
-    
+
 </script>
 
 
