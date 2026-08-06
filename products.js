@@ -2,7 +2,7 @@ const products = [
 
 {
     name:"Smart Watch",
-    price:50,
+    price:8,
     image:"audionic-the-sound-master-black-dany-amoled-pulse-pro-smart-watch-36385408090268copy.webp",
     category:"electronics",
     description:"Premium Smart Watch with fitness tracking."
@@ -10,7 +10,7 @@ const products = [
 
 {
     name:"Wireless Earbuds",
-    price:35,
+    price:11,
     image:"wireless earbud.jpg",
     category:"electronics",
     description:"Crystal clear sound with long battery."
@@ -18,7 +18,7 @@ const products = [
 
 {
     name:"Gaming Mouse",
-    price:25,
+    price:6,
     image:"m9_gaming_mouse_studio-1024x1024.webp",
     category:"electronics",
     description:"RGB Gaming Mouse with high precision."
@@ -26,7 +26,7 @@ const products = [
 
 {
     name:"Bluetooth Speaker",
-    price:45,
+    price:7,
     image:"bluetooth speaker.webp",
     category:"electronics",
     description:"Portable speaker with deep bass."
@@ -35,7 +35,7 @@ const products = [
 {
        
     name:"Cera Ve",
-    price:30,
+    price:7,
     image:"Cera Ve.jpg",
     category:"beauty",
     description:"Best Skin care Product."
@@ -44,7 +44,7 @@ const products = [
 {
        
     name:"Night Cream",
-    price:15,
+    price:4,
     image:"night cream.webp",
     category:"beauty",
     description:"Night Cream 50ml Bright White Clear Skin for Pakistani Skin."
@@ -54,7 +54,7 @@ const products = [
 {
        
     name:"Women Suit",
-    price:10,
+    price:7,
     image:"suit.webp",
     category:"fashion",
     description:"2 Pcs Women's Unstitched Printed Suit."
