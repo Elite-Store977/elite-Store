@@ -20,70 +20,26 @@ body{
     line-height:1.6;
 }
 
-/* Header */
-/* ===========================
-   DARAZ HEADER
-=========================== */
+/* =========================
+   HEADER
+========================= */
 
-.header{
+header{
+    background:#111827;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    flex-wrap:wrap;
     position:sticky;
     top:0;
-    z-index:9999;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-
-    background:#f85606;
-    padding:12px 20px;
-
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
+    z-index:1000;
+    box-shadow:0 3px 12px rgba(0,0,0,.15);
 }
 
 .logo h1{
-    color:#fff;
-    font-size:24px;
-    white-space:nowrap;
-}
-
-.search-box{
-    flex:1;
-    display:flex;
-    align-items:center;
-    background:#fff;
-    border-radius:5px;
-    overflow:hidden;
-}
-
-.search-box input{
-    width:100%;
-    border:none;
-    outline:none;
-    padding:12px;
-    font-size:15px;
-}
-
-.search-btn{
-    background:#ffe1d2;
-    border:none;
-    padding:12px 15px;
-    cursor:pointer;
-}
-
-.icons{
-    display:flex;
-    align-items:center;
-}
-
-.cart{
-    color:#fff;
-    font-size:25px;
-    cursor:pointer;
-}
-
-.cart span{
-    font-size:16px;
+    font-size:30px;
     font-weight:bold;
 }
 
@@ -91,57 +47,78 @@ body{
     display:none;
     background:none;
     border:none;
-    color:white;
+    color:#fff;
     font-size:28px;
     cursor:pointer;
 }
 
 nav{
     display:flex;
-    justify-content:center;
-    gap:30px;
-    background:#fff;
-    padding:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    gap:20px;
+    align-items:center;
 }
 
 nav a{
+    color:#fff;
     text-decoration:none;
-    color:#333;
-    font-weight:600;
+    font-size:16px;
+    font-weight:bold;
+    transition:.3s;
 }
 
 nav a:hover{
-    color:#f85606;
+    color:#f59e0b;
 }
 
-/* ===========================
+.cart{
+    background:#f59e0b;
+    color:#fff;
+    padding:10px 18px;
+    border-radius:30px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* =========================
    MOBILE
-=========================== */
+========================= */
 
 @media(max-width:768px){
 
 header{
-    padding:12px 15px;
-    display:flex;
+    padding:15px;
     justify-content:space-between;
-    align-items:center;
 }
 
 .logo h1{
-    font-size:20px;
-}
-
-nav{
-    display:none;
+    font-size:22px;
 }
 
 .menu-btn{
     display:block;
 }
 
+nav{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    margin-top:15px;
+    gap:0;
+}
+
+nav.active{
+    display:flex;
+}
+
+nav a{
+    padding:12px;
+    border-top:1px solid rgba(255,255,255,.15);
+    width:100%;
+    text-align:center;
+}
+
 .cart{
-    padding:8px 12px;
+    padding:8px 14px;
     font-size:14px;
 }
 
