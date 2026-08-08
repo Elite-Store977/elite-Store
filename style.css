@@ -121,58 +121,28 @@ nav a:hover{
 
 @media(max-width:768px){
 
-.header{
-
-    display:grid;
-    grid-template-columns:40px 1fr 40px;
-    grid-template-areas:
-    "menu logo cart"
-    "search search search";
-
-    gap:10px;
-}
-
-.menu-btn{
-    display:block;
-    grid-area:menu;
-}
-
-.logo{
-    grid-area:logo;
-    text-align:center;
+header{
+    padding:12px 15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .logo h1{
-    font-size:18px;
-}
-
-.search-box{
-    grid-area:search;
-}
-
-.icons{
-    grid-area:cart;
-    justify-content:flex-end;
-}
-
-.cart{
-    font-size:24px;
+    font-size:20px;
 }
 
 nav{
     display:none;
-    flex-direction:column;
-    text-align:center;
-    gap:0;
 }
 
-nav.active{
-    display:flex;
+.menu-btn{
+    display:block;
 }
 
-nav a{
-    padding:14px;
-    border-bottom:1px solid #eee;
+.cart{
+    padding:8px 12px;
+    font-size:14px;
 }
 
 }
