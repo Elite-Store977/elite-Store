@@ -200,7 +200,7 @@ if(container){
 
             <h3>${product.name}</h3>
 
-            <p>PKR${product.price}</p>
+            <p>PKR:${product.price}</p>
 
             <p>${product.description}</p>
 
