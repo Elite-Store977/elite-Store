@@ -223,3 +223,7 @@ if(container){
 
     });
 }
+
+function menuToggle() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+}
